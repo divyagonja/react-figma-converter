@@ -2,6 +2,7 @@
 import { CheckSquare, AlertCircle, Workflow } from "lucide-react";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import StatsCard from "@/components/StatsCard";
 import DataTable from "@/components/DataTable";
 
@@ -58,6 +59,7 @@ const Index = () => {
           {/* Data Table */}
           <DataTable />
         </main>
+        <Footer />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 
 import { Home, CheckSquare, AlertCircle, Workflow, Calendar, FileText, Book, Users, BarChart3, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
   activeItem?: string;
@@ -39,8 +40,8 @@ const Sidebar = ({ activeItem = "home" }: SidebarProps) => {
         <ul className="space-y-1">
           {menuItems.map((item) => (
             <li key={item.id}>
-              <a
-                href="#"
+              <Link
+                to={item.id === "home" ? "/" : `/${item.id}`}
                 className={cn(
                   "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                   activeItem === item.id
@@ -50,7 +51,7 @@ const Sidebar = ({ activeItem = "home" }: SidebarProps) => {
               >
                 <item.icon className="w-5 h-5" />
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,6 +1,8 @@
 
-import { Bell, Calendar, ChevronDown } from "lucide-react";
+import { Calendar, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import NotificationButton from "./NotificationButton";
+import CreateButton from "./CreateButton";
 
 const Header = () => {
   return (
@@ -21,9 +23,7 @@ const Header = () => {
           </div>
 
           {/* Notifications */}
-          <Button variant="ghost" size="sm" className="p-2">
-            <Bell className="w-5 h-5 text-gray-600" />
-          </Button>
+          <NotificationButton />
 
           {/* Profile dropdown */}
           <div className="flex items-center gap-2 text-sm">
@@ -32,9 +32,7 @@ const Header = () => {
           </div>
 
           {/* Create button */}
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
-            + Create
-          </Button>
+          <CreateButton />
         </div>
       </div>
     </header>
